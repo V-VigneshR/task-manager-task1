@@ -274,8 +274,8 @@ The API provides consistent error responses:
 ```
 
 ## OUTPUT SCREENSHOTS
-![one](Output/one.png)
-![two](Output/two.png)
+![one](Output/one.jpg)
+![two](Output/two.jpg)
 
 
 ## Troubleshooting
