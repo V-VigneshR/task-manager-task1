@@ -11,6 +11,36 @@ A Spring Boot application that provides a REST API for managing and executing sh
 - **MongoDB Integration**: Persistent storage for tasks and execution history
 - **Error Handling**: Comprehensive error handling with meaningful responses
 
+
+## Project Structure
+```
+
+task-manager-api/
+├── src/main/java/com/taskmanager/
+│   ├── TaskManagerApplication.java      # Main application
+│   ├── controller/
+│   │   └── TaskController.java          # REST endpoints
+│   ├── service/
+│   │   ├── TaskService.java             # Service interface
+│   │   └── TaskServiceImpl.java         # Business logic
+│   ├── model/
+│   │   ├── Task.java                    # Task entity
+│   │   └── TaskExecution.java           # Execution record
+│   ├── repository/
+│   │   └── TaskRepository.java          # MongoDB repository
+│   ├── dto/
+│   │   ├── TaskCreateRequest.java       # Request DTOs
+│   │   └── TaskExecutionRequest.java
+│   ├── exception/
+│   │   ├── TaskNotFoundException.java   # Custom exceptions
+│   │   └── GlobalExceptionHandler.java
+│   └── util/
+│       └── CommandValidator.java        # Security validation
+└── src/main/resources/
+    └── application.properties           # Configuration
+```
+
+
 ## Prerequisites
 
 Before running the application, ensure you have:
@@ -187,33 +217,7 @@ The application only allows safe commands. Here are some examples:
 - `wget http://malicious.com`
 - Commands with pipes `|`, redirects `>`, or other dangerous patterns
 
-## Project Structure
 
-```
-task-manager-api/
-├── src/main/java/com/taskmanager/
-│   ├── TaskManagerApplication.java      # Main application
-│   ├── controller/
-│   │   └── TaskController.java          # REST endpoints
-│   ├── service/
-│   │   ├── TaskService.java             # Service interface
-│   │   └── TaskServiceImpl.java         # Business logic
-│   ├── model/
-│   │   ├── Task.java                    # Task entity
-│   │   └── TaskExecution.java           # Execution record
-│   ├── repository/
-│   │   └── TaskRepository.java          # MongoDB repository
-│   ├── dto/
-│   │   ├── TaskCreateRequest.java       # Request DTOs
-│   │   └── TaskExecutionRequest.java
-│   ├── exception/
-│   │   ├── TaskNotFoundException.java   # Custom exceptions
-│   │   └── GlobalExceptionHandler.java
-│   └── util/
-│       └── CommandValidator.java        # Security validation
-└── src/main/resources/
-    └── application.properties           # Configuration
-```
 
 ## Error Handling
 
@@ -268,6 +272,11 @@ The API provides consistent error responses:
     ]
 }
 ```
+
+## OUTPUT SCREENSHOTS
+![one](Output/one.png)
+![two](Output/two.png)
+
 
 ## Troubleshooting
 
